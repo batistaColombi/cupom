@@ -1,0 +1,23 @@
+{
+  "name": "cupom",
+  "version": "1.0.0",
+  "description": "Cupom e Notificação",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/batistaColombi/cupom.git"
+  },
+  "author": "BatistaColombi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/batistaColombi/cupom/issues"
+  },
+  "homepage": "https://github.com/batistaColombi/cupom#readme",
+  "devDependencies": {
+    "electron": "^34.0.0"
+  }
+}
