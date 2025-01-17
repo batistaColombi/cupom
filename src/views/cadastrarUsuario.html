@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline';">
+    <title>Cadastro - Dito's System</title>
+    <link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body>
+    <div class="register-container">
+        <h1>Cadastro de Usuário</h1>
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="username">Usuário</label>
+                <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirmar Senha</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirme sua senha" required>
+            </div>
+            <div class="form-group">
+                <label for="adminPassword">Senha do Administrador</label>
+                <input type="password" id="adminPassword" name="adminPassword" placeholder="Digite a senha do administrador">
+            </div>
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="isAdmin" name="isAdmin">
+                    Criar conta de administrador
+                </label>
+            </div>
+            <div class="form-actions">
+                <button type="submit">Cadastrar</button>
+            </div>
+        </form>
+        <div class="links">
+            <p id="register-link">ja possui uma conta? <a href="cadastrarUsuario.html">Faça login</a></p>
+        </div>
+
+        <button id="backButton">Voltar</button>
+    </div>
+
+    <script src="../public/js/login/register.js"></script>
+</body>
+</html>

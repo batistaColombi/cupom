@@ -2,12 +2,22 @@ const { contextBridge, ipcRenderer } = require('electron');
 
 // Expor APIs seguras para o renderer
 contextBridge.exposeInMainWorld('api', {
+    //Janelas principais
     verElectron: () => process.versions.electron, // Expor a versão do Electron
-    openIndex: () => ipcRenderer.send('open-Index'), // Abrir Cadastro de Notificação
+    openIndex: () => ipcRenderer.send('open-Index'), // Abrir tela de login
     openDash: () => ipcRenderer.send('open-Dash'), // Abrir Dashboard
-    openCupom: () => ipcRenderer.send('open-Cupom'), // Abrir Cadastro de Cupom
-    openNotificacao: () => ipcRenderer.send('open-Not'), // Abrir Cadastro de Notificação
-    on: (channel, callback) => ipcRenderer.on(channel, callback), // Escutar eventos IPC
+    openCupom: () => ipcRenderer.send('open-Cupom'), // Abrir Cupom
+    openNotificacao: () => ipcRenderer.send('open-Not'), // Abrir Notificação
+
+    //telas de cadastro
+    openCadastrarUsuario: () => ipcRenderer.send('Open-Cadastrar-Usuario'), // Abrir Cadastro de usuario
+    openCadastrarCupom: () => ipcRenderer.send('Open-Cadastrar-Cupom'), // Abrir Cadastro de cupom
+    openCadastrarNotificacao: () => ipcRenderer.send('Open-Cadastrar-Not'), // Abrir Cadastro de notificaçoes
+
+    //telas de edição
+    openEditarUsuario: () => ipcRenderer.send('Open-Editar-Usuario'), // Abrir Edição de usuario
+    openEditarCupom: () => ipcRenderer.send('Open-Editar-Cupom'), // Abrir Edição de cupom
+    openEditarNotificacao: () => ipcRenderer.send('Open-Editar-Not'), // Abrir Edição de notificaçoes
 });
 
 // Manipulação do DOM

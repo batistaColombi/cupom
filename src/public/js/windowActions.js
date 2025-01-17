@@ -22,7 +22,7 @@ const openDashboard = () => {
         createWindowGeneric({
             width: 800,
             height: 600,
-            filePath: src = './src/views/index.html',
+            filePath: src = './src/views/dashboard.html',
             parent,
             modal: true,
             autoHideMenuBar: false
@@ -46,6 +46,34 @@ const openCupom = () => {
     }
 };
 
+const openCadastrarCupom = () => {
+    const parent = BrowserWindow.getFocusedWindow();
+    if (parent) {
+        createWindowGeneric({
+            width: 800,
+            height: 600,
+            filePath: './src/views/cadastrarCupom.html',
+            parent,
+            modal: true,
+            autoHideMenuBar: true
+        });
+    }
+};
+
+const openEditarCupom = () => {
+    const parent = BrowserWindow.getFocusedWindow();
+    if (parent) {
+        createWindowGeneric({
+            width: 800,
+            height: 600,
+            filePath: './src/views/editarCupom.html',
+            parent,
+            modal: true,
+            autoHideMenuBar: true
+        });
+    }
+};
+
 //Janeala das Notificações______________________________________
 const openNotificacao = () => {
     const parent = BrowserWindow.getFocusedWindow();
@@ -61,10 +89,73 @@ const openNotificacao = () => {
     }
 };
 
+const openCadastrarNotificacao = () => {
+    const parent = BrowserWindow.getFocusedWindow();
+    if (parent) {
+        createWindowGeneric({
+            width: 800,
+            height: 600,
+            filePath: './src/views/cadastrarNotificacao.html',
+            parent,
+            modal: true,
+            autoHideMenuBar: true
+        });
+    }
+};
+
+const openEditarNotificacao = () => {
+    const parent = BrowserWindow.getFocusedWindow();
+    if (parent) {
+        createWindowGeneric({
+            width: 800,
+            height: 600,
+            filePath: './src/views/editarNotificacao.html',
+            parent,
+            modal: true,
+            autoHideMenuBar: true
+        });
+    }
+};
+
+//Janealas Cadastro e Edição de Usuário______________________________________
+const openCadastrarUsuario = () => {
+    const parent = BrowserWindow.getFocusedWindow();
+    if (parent) {
+        createWindowGeneric({
+            width: 800,
+            height: 600,
+            filePath: './src/views/cadastrarUsuario.html',
+            parent,
+            modal: true,
+            autoHideMenuBar: true
+        });
+    }
+};
+
+const openEditarUsuario = () => {
+    const parent = BrowserWindow.getFocusedWindow();
+    if (parent) {
+        createWindowGeneric({
+            width: 800,
+            height: 600,
+            filePath: './src/views/editarUsuario.html',
+            parent,
+            modal: true,
+            autoHideMenuBar: true
+        });
+    }
+};
+
 
 module.exports = {
     openIndex,
     openDashboard,
     openCupom,
-    openNotificacao
+    openCadastrarCupom,
+    openEditarCupom,
+    openNotificacao,
+    openCadastrarNotificacao,
+    openEditarNotificacao,
+    openCadastrarUsuario,
+    openEditarUsuario
 };

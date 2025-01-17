@@ -1,8 +1,14 @@
 const { Menu } = require('electron');
 const { openIndex,
+        openDashboard,
         openCupom,
+        openCadastrarCupom,
+        openEditarCupom,
         openNotificacao,
-        openDashboard} = require('./windowActions.js');
+        openCadastrarNotificacao,
+        openEditarNotificacao,
+        openCadastrarUsuario,
+        openEditarUsuario} = require('./windowActions.js');
 
 const template = [
     {
@@ -10,6 +16,10 @@ const template = [
         click: () => openIndex(),
 
         submenu: [
+            {
+                label: 'Dashboard',
+                click: () => openDashboard()
+            },
             {   label: 'Ferramentas do desenvolvedor', 
                 role: 'toggleDevTools',},
 
@@ -21,11 +31,6 @@ const template = [
                 accelerator: 'Alt+F4' },
         ],
     },
-    //{ 
-        //label: 'Dashboard',
-        //click: () => openDashboard()
-
-    //},
     { 
         label: 'Cupom',
         click: () => openCupom()

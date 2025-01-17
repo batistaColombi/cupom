@@ -10,9 +10,18 @@
 <body>
 
     <!-- Processo de renderização -->
-    <script src = "../src/public/js/renderer.js"></script>
+    <script src = "../public/js/renderer.js"></script>
 
     <h1>Dashboard</h1>
   
+     <!-- Tela para quem já está logado -->
+     <div id="logged-in-container" style="display:none;">
+        <button onclick="openCupom()">Cupons</button>
+        <button onclick="openNotificacao()">Notificações</button>
+        <button onclick="openEditarUsuario()">Gerenciar Contas</button>
+        <button onclick="logout()">Sair</button> 
+    </div> 
+    </div>
+
 </body>
 </html>
