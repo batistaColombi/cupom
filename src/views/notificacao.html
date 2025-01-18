@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
-    <title>Dito's System</title>
-
+    <title>Dito's Notificação</title>
 </head>
-<body>
 
     <!-- Processo de renderização-->
     <script src = "../public/js/renderer.js"></script>
 
-    <h1>Notificações</h1>
+<body>
 
+    <h1>Notificações</h1>
+    <div>
+        <input type="text" id="notificationMessage" placeholder="Enter notification message">
+        <button id="addNotification">Add Notification</button>
+    </div>
+    
+    <ul id="notificationList"></ul>
+
+    <script src = "../public/js/notificacaoManager.js"></script>
 
 </body>
 </html>

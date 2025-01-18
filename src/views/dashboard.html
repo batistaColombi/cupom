@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
+
     <title>Dito's System</title>
 
 </head>
@@ -12,16 +13,31 @@
     <!-- Processo de renderização -->
     <script src = "../public/js/renderer.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <h1>Dashboard</h1>
-  
-     <!-- Tela para quem já está logado -->
-     <div id="logged-in-container" style="display:none;">
+    <div>
         <button onclick="openCupom()">Cupons</button>
         <button onclick="openNotificacao()">Notificações</button>
-        <button onclick="openEditarUsuario()">Gerenciar Contas</button>
+        <button onclick="location.href='editarUsuario.html'">Gerenciar Usuários</button>
         <button onclick="logout()">Sair</button> 
     </div> 
+    
+    <div class="dashboard-container">
+        <div class="chart-container">
+            <h3>App Downloads</h3>
+            <canvas id="downloadsChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <h3>App Retention</h3>
+            <canvas id="retentionChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <h3>Coupon Usage</h3>
+            <canvas id="couponChart"></canvas>
+        </div>
     </div>
 
+    <script src="../public/js/dashboard.js"></script>
 </body>
 </html>

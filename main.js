@@ -32,8 +32,8 @@ ipcMain.on('Open-Editar-Usuario', openEditarUsuario);
 // App Events
 app.whenReady().then(() => {
     createMainWindow();
-    setApplicationMenu('index'); // Chamada correta da função com argumento
-
+    setApplicationMenu('index');
+    
     app.on('activate', () => {
         if (BrowserWindow.getAllWindows().length === 0) createMainWindow();
     });

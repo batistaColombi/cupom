@@ -4,32 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
-    <title>Dito's System</title>
+    <title>Dito's Gerenciamento de Usuarios</title>
 
+    <link rel="stylesheet" href="../public/css/styleEditarUsuario.css">
+    
 </head>
 <body>
 
     <!-- Processo de renderização-->
     <script src = "../public/js/renderer.js"></script>
 
-    <h1>Editar Usuário</h1>
-
     <!-- Tela de Gerenciamento de Contas -->
     <div id="manage-accounts-container" style="display:none;">
-        <h2>Gerenciar Contas</h2>
-        <ul id="user-list">
-            <!-- Os usuários serão listados dinamicamente aqui -->
-        </ul>
-        <div id="edit-account-container" style="display:none;">
-            <h3>Editar Conta</h3>
-            <label for="edit-username">Usuário:</label>
-            <input type="text" id="edit-username" placeholder="Novo nome de usuário" />
-            <label for="edit-password">Senha:</label>
-            <input type="password" id="edit-password" placeholder="Nova senha" />
-            <button onclick="saveAccountChanges()">Salvar Alterações</button>
-            <button onclick="cancelEditAccount()">Cancelar</button>
-        </div>
-    <button onclick="closeManageAccounts()">Fechar</button>
+    
+        <h1>Lista de Usuários</h1>
+        <div id="user-list-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome de Usuário</th>
+                        <th>Nível de Acesso</th>
+                        <th>Senha</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="user-list">
+                    <!-- Lista de usuários será renderizada aqui -->
+                </tbody>
+            </table>
+            <button onclick="saveChanges()">Salvar Alterações</button>
+            <button onclick="goBack()">Fechar</button>
 
+        </div>
+    <script src = "../public/js/login/editarUsuario.js"></script>
 </body>
 </html>

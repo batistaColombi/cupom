@@ -1,42 +1,66 @@
-// Função para verificar o login com dados armazenados no localStorage
-function authenticateUser(username, password) {
-    const storedUser = JSON.parse(localStorage.getItem('user'));
+document.addEventListener('DOMContentLoaded', () => {
+    const loginForm = document.getElementById('loginForm');
+    const usernameInput = document.getElementById('username');
+    const passwordInput = document.getElementById('password');
 
-    // Verifica se os dados do usuário estão no localStorage e são válidos
-    if (storedUser && storedUser.username === username && storedUser.password === password) {
-        return true;
-    }
-    return false;
-}
+    if (loginForm) {
+        loginForm.addEventListener('submit', (event) => {
+            event.preventDefault();
 
-// Função para simular a recuperação de senha
-function recoverPassword() {
-    alert('Uma nova senha foi enviada para seu Email.');
-}
+            const username = usernameInput.value.trim();
+            const password = passwordInput.value;
 
-// Event listener para o login
-document.getElementById('loginForm').addEventListener('submit', function (event) {
-    event.preventDefault();
+            // Recuperar os usuários do localStorage
+            const users = JSON.parse(localStorage.getItem('users')) || [];
 
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+            // Verificar se o usuário existe
+            const user = users.find(u => u.username === username && u.password === password);
 
-    if (username === '' || password === '') {
-        alert('Por favor, preencha todos os campos.');
-        return;
-    }
-
-    // Verifica se o usuário existe no localStorage e se a senha corresponde
-    if (authenticateUser(username, password)) {
-        alert('Login realizado com sucesso!');
-        // Redirecionar para o dashboard
-        window.location.href = 'dashboard.html';
-    } else {
-        alert('Usuário ou senha incorretos.');
+            if (user) {
+                alert('Login bem-sucedido!');
+                // Redirecionar para o dashboard ou página principal
+                window.location.href = 'dashboard.html';
+            } else {
+                alert('Usuário ou senha inválidos.');
+            }
+        });
     }
 });
 
-// Event listener para recuperação de senha
-document.getElementById('forgotPassword').addEventListener('click', function () {
-    recoverPassword();
+// Função para verificar o login
+function validateLogin(username, password) {
+  const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
+  return storedUsers.some(user => user.username === username && user.password === password);
+}
+
+// Verifica se o usuário já está logado
+function checkIfLoggedIn() {
+    const currentUser = localStorage.getItem('currentUser');
+    if (currentUser) {
+      // Redireciona para o dashboard se já estiver logado
+      window.location.href = 'dashboard.html';
+    }
+  }
+
+    // Chama a verificação assim que o script é carregado
+    checkIfLoggedIn();
+
+// Manipulador do evento de envio do formulário
+loginForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  
+  const username = document.getElementById('username').value.trim();
+  const password = document.getElementById('password').value.trim();
+
+  if (validateLogin(username, password)) {
+    // Salva o estado de login no localStorage
+    localStorage.setItem('currentUser', username);
+    window.location.href = 'dashboard.html';
+  } else {
+    alert('Usuário ou senha inválidos.');
+  }
 });
+
+function CadastrarUsuario() {
+    window.open(href ="cadastrarUsuario.html");
+}
