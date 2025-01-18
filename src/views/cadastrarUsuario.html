@@ -4,46 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline';">
+   
     <title>Cadastro - Dito's System</title>
-    <link rel="stylesheet" href="../public/css/style.css">
+
 </head>
+
 <body>
-    <div class="register-container">
-        <h1>Cadastro de Usuário</h1>
+    <!-- Processo de renderização-->
+    <script src = "../public/js/renderer.js"></script>
+
+        <h1>Cadastro de Usuário</h1>   
+        
         <form id="registerForm">
-            <div class="form-group">
-                <label for="username">Usuário</label>
-                <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
+            <div>
+                <input id="username" type="text" placeholder="Nome de usuário" required />
             </div>
-            <div class="form-group">
-                <label for="password">Senha</label>
-                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+
+            <div>
+                <input id="password" type="password" placeholder="Senha" required />            
             </div>
-            <div class="form-group">
-                <label for="confirmPassword">Confirmar Senha</label>
-                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirme sua senha" required>
+
+            <div>
+                <input id="confirm-password" type="password" placeholder="Confirme a senha" required />
             </div>
-            <div class="form-group">
-                <label for="adminPassword">Senha do Administrador</label>
-                <input type="password" id="adminPassword" name="adminPassword" placeholder="Digite a senha do administrador">
+
+            <div>
+                <select id="access-level" required>
+                    <option value="admin">Administrador</option>
+                    <option value="user">Usuário</option>
+                </select>
             </div>
-            <div class="form-group">
-                <label>
-                    <input type="checkbox" id="isAdmin" name="isAdmin">
-                    Criar conta de administrador
-                </label>
-            </div>
-            <div class="form-actions">
+
+            <div>
                 <button type="submit">Cadastrar</button>
-            </div>
+
+                <br>
+                <br>
+
+                <button type="button" id="cancelButton">Cancelar</button>
+            </div>                     
         </form>
-        <div class="links">
-            <p id="register-link">ja possui uma conta? <a href="cadastrarUsuario.html">Faça login</a></p>
-        </div>
 
-        <button id="backButton">Voltar</button>
+        <script src="../public/js/login/register.js"></script>
+        
     </div>
-
-    <script src="../public/js/login/register.js"></script>
 </body>
 </html>

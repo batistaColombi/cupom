@@ -41,7 +41,7 @@ const openCupom = () => {
             filePath: './src/views/cupom.html',
             parent,
             modal: true,
-            autoHideMenuBar: true
+            autoHideMenuBar: false
         });
     }
 };
@@ -84,7 +84,7 @@ const openNotificacao = () => {
             filePath: './src/views/notificacao.html',
             parent,
             modal: true,
-            autoHideMenuBar: true
+            autoHideMenuBar: false
         });
     }
 };
@@ -127,7 +127,7 @@ const openCadastrarUsuario = () => {
             filePath: './src/views/cadastrarUsuario.html',
             parent,
             modal: true,
-            autoHideMenuBar: true
+            autoHideMenuBar: false
         });
     }
 };
