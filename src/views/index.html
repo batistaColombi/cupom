@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,34 +13,34 @@
 
 </head>
 </head>
+
 <body>
 
     <!-- Área da imagem -->
     <div class="image-container"></div>
 
-    <!-- Área do formulário -->
-    <div class="form-container">
-        <form id="loginForm">
-            <h1>Dito's Lanches</h1>
-            <div>
-                <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
-            </div>
-            <div>
-                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
-            </div>
-            <div>
-                <button type="submit">Entrar</button>
-            </div>
-            <div>
-                <p>Esqueceu sua senha? <a href="#">Recuperar</a></p>
-            </div>  
-        </form>
-    </div>
+    <form id="loginForm">
+        <div>
+            <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
+        </div>
 
-    <!-- Tela de carregamento -->
-    <div id="loadingScreen" class="loading-screen">
-        <img src="../public/img/ditosImg.png" alt="Carregando..." />
-    </div>
+        </div>
+            <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+            
+        </div>
+
+        <div>
+            <button type="submit">Entrar</button>
+        </div>
+
+        <div>
+            <a href="#" onclick="esqueceuSenha()">Esqueceu sua senha?</a>
+        </div>
+
+        <div>
+            <p>Não tem uma conta? <a href="cadastrarUsuario.html">Cadastre-se</a></p>
+        </div>    
+    </form>
 
     <script src="../public/js/login/login.js"></script>
 
@@ -47,4 +48,5 @@
     <script src="../public/js/renderer.js"></script>
 
 </body>
+
 </html>
