@@ -1,0 +1,220 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Fundo branco */
+    color: #333; /* Texto escuro */
+    padding: 20px;
+}
+
+/* Container principal */
+.main-container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #ffffff; /* Fundo branco */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+/* Título */
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff7300; /* Laranja escuro */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Botões principais */
+.back-button, .add-notification-button {
+    background-color: #ff7300; /* Laranja escuro */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.add-notification-button {
+    float: right;
+    background-color: #27ae60; /* Verde */
+}
+
+button:hover {
+    background-color: #e06200; /* Laranja mais escuro */
+}
+
+.add-notification-button:hover {
+    background-color: #1e8449; /* Verde mais escuro */
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd; /* Bordas cinza claro */
+    font-size: 14px;
+}
+
+th {
+    background-color: #ff7300; /* Laranja escuro */
+    color: #fff; /* Texto branco */
+    font-weight: bold;
+}
+
+td {
+    background-color: #fff; /* Fundo branco */
+    color: #333; /* Texto escuro */
+}
+
+td button {
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.edit-button {
+    background-color: #ff7300; /* Azul */
+    color: #fff;
+}
+
+.edit-button:hover {
+    background-color: #cf5d00; /* Azul mais escuro */
+}
+
+.delete-button {
+    background-color: #292929; /* Vermelho */
+    color: #fff;
+}
+
+.delete-button:hover {
+    background-color: #a71d2a; /* Vermelho mais escuro */
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333; /* Texto escuro */
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #fff; /* Fundo branco */
+    color: #333; /* Texto escuro */
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #ff7300; /* Destaque laranja escuro */
+}
+
+/* Botões do formulário */
+button[type="submit"] {
+    background-color: #27ae60; /* Verde */
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #1e8449; /* Verde mais escuro */
+}
+
+button.cancel-button {
+    background-color: #ff7300; /* Laranja escuro */
+}
+
+button.cancel-button:hover {
+    background-color: #e06200; /* Laranja mais escuro */
+}
+
+/* Estilo geral para o select */
+.status-select {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    color: #fff; /* Texto branco */
+}
+
+/* Estilo geral para o select */
+.status-select {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff; /* Texto branco */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Status ativo - Verde */
+.status-select[value="ativa"] {
+    background-color: #27ae60; /* Verde */
+    color: #fff; /* Texto branco */
+}
+
+/* Status inativo - Vermelho */
+.status-select[value="inativa"] {
+    background-color: #e74c3c; /* Vermelho */
+    color: #fff; /* Texto branco */
+}
+
+/* Hover */
+.status-select:hover {
+    opacity: 0.9;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    th, td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .add-notification-button {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}

@@ -4,49 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline';">
-   
-    <title>Cadastro - Dito's System</title>
+    <title>Dito's System - Cadastro de Usuário</title>
 
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../public/css/styleLogin.css">
 </head>
+<body> 
+    
+    <!-- Formulário de Cadastro -->
+    <form id="registerForm">
 
-<body>
-    <!-- Processo de renderização-->
-    <script src = "../public/js/renderer.js"></script>
+        <!-- Título da página -->
+        <h1>Cadastro de Usuário</h1>  
 
-        <h1>Cadastro de Usuário</h1>   
-        
-        <form id="registerForm">
-            <div>
-                <input id="username" type="text" placeholder="Nome de usuário" required />
-            </div>
+        <!-- Campo Nome de Usuário -->
+        <div class="form-group">
+            <input id="username" type="text" placeholder="Nome de usuário" required>
+        </div>
 
-            <div>
-                <input id="password" type="password" placeholder="Senha" required />            
-            </div>
+        <!-- Campo Senha -->
+        <div class="form-group">
+            <input id="password" type="password" placeholder="Senha" required>
+        </div>
 
-            <div>
-                <input id="confirm-password" type="password" placeholder="Confirme a senha" required />
-            </div>
+        <!-- Campo Confirmar Senha -->
+        <div class="form-group">
+            <input id="confirm-password" type="password" placeholder="Confirme a senha" required>
+        </div>
 
-            <div>
-                <select id="access-level" required>
-                    <option value="admin">Administrador</option>
-                    <option value="user">Usuário</option>
-                </select>
-            </div>
+        <!-- Campo Nível de Acesso -->
+        <div class="form-group">
+            <select id="access-level" required>
+                <option value="" disabled selected>Selecione o nível de acesso</option>
+                <option value="admin">Administrador</option>
+                <option value="user">Usuário</option>
+            </select>
+        </div>
 
-            <div>
-                <button type="submit">Cadastrar</button>
+        <!-- Botões -->
+        <div class="form-actions">
+            <button type="submit">Cadastrar</button>
+            <button type="button" id="cancelButton">Cancelar</button>
+        </div>                     
+    </form>
 
-                <br>
-                <br>
-
-                <button type="button" id="cancelButton">Cancelar</button>
-            </div>                     
-        </form>
-
-        <script src="../public/js/login/register.js"></script>
-        
-    </div>
+    <!-- Scripts -->
+    <script src="../public/js/renderer.js"></script>
+    <script src="../public/js/login/register.js"></script>
 </body>
 </html>

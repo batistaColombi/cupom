@@ -1,0 +1,107 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333; /* Fundo preto suave */
+    color: #fff; /* Texto branco */
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves */
+}
+
+/* Estilo do título */
+h1 {
+    font-size: 2.5em;
+    color: #ff6600; /* Laranja vibrante */
+    margin-bottom: 20px;
+    text-align: center;
+    transition: color 0.3s ease; /* Transição para o título */
+}
+
+h1:hover {
+    color: #cc5200; /* Laranja mais escuro no hover */
+}
+
+/* Estilo para os botões na parte superior */
+div > button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #ff6600; /* Laranja vibrante */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transições para hover e clique */
+}
+
+div > button:hover {
+    background-color: #cc5200; /* Laranja mais escuro */
+    transform: scale(1.05); /* Leve aumento no hover */
+}
+
+div > button:active {
+    transform: scale(0.95); /* Leve redução no clique */
+}
+
+/* Estilo para o container de dashboard */
+.dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 30px;
+    transition: gap 0.3s ease; /* Transição para o espaçamento */
+}
+
+/* Estilo para os containers dos gráficos */
+.chart-container {
+    background-color: #fff; /* Fundo branco */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições de hover */
+}
+
+.chart-container:hover {
+    transform: translateY(-10px); /* Elevação no hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra mais forte no hover */
+}
+
+/* Estilo do título dos gráficos */
+.chart-container h3 {
+    font-size: 1.5em;
+    color: #ff6600; /* Laranja vibrante */
+    margin-bottom: 15px;
+    transition: color 0.3s ease; /* Transição para o título dos gráficos */
+}
+
+.chart-container h3:hover {
+    color: #cc5200; /* Laranja mais escuro no hover */
+}
+
+/* Largura do gráfico */
+canvas {
+    width: 100% !important;
+    height: 300px;
+}
+
+/* Estilo da área de gráficos quando a tela for pequena */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .chart-container {
+        max-width: 90%; /* Ajuste do tamanho para telas pequenas */
+    }
+}

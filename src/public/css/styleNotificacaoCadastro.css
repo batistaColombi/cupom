@@ -1,0 +1,122 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Fundo branco */
+    color: #333; /* Texto escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container principal */
+.main-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff; /* Fundo branco */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Título */
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff7300; /* Laranja escuro */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #ff7300; /* Destaque laranja escuro */
+}
+
+/* Botões */
+button {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.submit-button {
+    background-color: #27ae60; /* Verde */
+    color: #fff;
+}
+
+.submit-button:hover {
+    background-color: #1e8449; /* Verde mais escuro */
+}
+
+.back-button {
+    background-color: #ff7300; /* Laranja escuro */
+    color: #fff;
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    background-color: #cc5c00; /* Laranja mais escuro */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

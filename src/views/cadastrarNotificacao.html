@@ -4,16 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
-    <title>Dito's System</title>
+    
+    <title>Dito's System - Cadastro de Notificação</title>
+
+    <!-- Link para o CSS -->
+    <link rel="stylesheet" href="../public/css/styleNotificacaoCadastro.css">
 
 </head>
 <body>
 
-    <!-- Processo de renderização-->
-    <script src = "../public/js/renderer.js"></script>
+    <!-- Processo de renderização -->
+    <script src="../public/js/renderer.js"></script>
 
-    <h1>Cadastrar Notificação</h1>
+    <div class="main-container">
+        <h1>Cadastrar Nova Notificação</h1>
 
+        <form id="notification-form">
+            <!-- Título -->
+            <div class="form-group">
+                <label for="notification-title">Título:</label>
+                <input type="text" id="notification-title" name="title" placeholder="Digite o título da notificação" required>
+            </div>
 
+            <!-- Mensagem -->
+            <div class="form-group">
+                <label for="notification-message">Mensagem:</label>
+                <textarea id="notification-message" name="message" placeholder="Digite a mensagem da notificação" required></textarea>
+            </div>
+
+            <!-- Data -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="notification-date">Data:</label>
+                    <input type="date" id="notification-date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="notification-time">Hora:</label>
+                    <input type="time" id="notification-time" name="time" required>
+                </div>
+            </div>
+
+            <!-- Status -->
+            <div class="form-group">
+                <label for="notification-status">Status:</label>
+                <select id="notification-status" name="status" required>
+                    <option value="ativa">Ativa</option>
+                    <option value="inativa">Inativa</option>
+                </select>
+            </div>
+
+            <!-- Botões -->
+            <div class="form-actions">
+                <button type="button" class="submit-button" onclick="saveNotificacao()">Cadastrar</button>
+                <button class="back-button" onclick="window.location.href='notificacao.html'">Voltar</button>
+            </div>
+        </form>
+    
+    </div>
+
+    
+    <script src="../public/js/notificacaoManager.js"></script>
 </body>
 </html>

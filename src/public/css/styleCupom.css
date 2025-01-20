@@ -1,0 +1,143 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8; /* Fundo claro */
+    color: #333; /* Texto escuro */
+    padding: 20px;
+}
+
+/* Container principal */
+.main-container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #fff; /* Fundo branco */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff7300; /* Laranja escuro */
+    margin-bottom: 20px;
+}
+
+/* Botões principais */
+.back-button, .add-coupon-button {
+    background-color: #ff7300; /* Laranja escuro */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.add-coupon-button {
+    float: right;
+}
+
+button:hover {
+    background-color: #1e8449; /* Laranja mais escuro */
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+th {
+    background-color: #f0f0f0;
+    color: #333;
+    font-weight: bold;
+}
+
+td {
+    background-color: #fff;
+}
+
+
+td button {
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.edit-button {
+    background-color: #2e2e2e; /* Azul */
+    color: #fff;
+}
+
+.edit-button:hover {
+    background-color: #1a1a1a; /* Azul mais escuro */
+}
+
+.delete-button {
+    background-color: #ff7300; /* Vermelho */
+    color: #fff;
+}
+
+.delete-button:hover {
+    background-color: #cc5c00; /* Vermelho mais escuro */
+}
+
+/* Estilo geral para o select */
+.status-select {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    color: #fff; /* Texto branco */
+}
+
+/* Ativo - Verde */
+.status-select option[value="true"] {
+    background-color: #1e8449; /* Verde */
+    color: #fff; /* Texto branco */
+}
+
+.status-select[value="true"] {
+    background-color: #1e8449; /* Verde */
+    border-color: #cc5c00; /* Verde mais escuro */
+}
+
+/* Inativo - Vermelho */
+.status-select option[value="false"] {
+    background-color: #c0392b; /* Vermelho */
+    color: #fff; /* Texto branco */
+}
+
+.status-select[value="false"] {
+    background-color: #2e2e2e; /* Vermelho */
+    border-color: #1a1a1a#c0392b; /* Vermelho mais escuro */
+}
+
+/* Hover no select */
+.status-select:hover {
+    opacity: 0.9;
+}

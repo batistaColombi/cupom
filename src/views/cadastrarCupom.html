@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
-    <title>Dito's System</title>
+    
+    <title>Dito's System - Cadastro de Cupom</title>
+
+    <!-- Link para o CSS -->
+    <link rel="stylesheet" href="../public/css/styleCupomCadastrar.css">
 
 </head>
 <body>
@@ -12,8 +16,68 @@
     <!-- Processo de renderização-->
     <script src = "../public/js/renderer.js"></script>
 
-    <h1>Cadastrar Cupom</h1>
-
+    <div class="main-container">
+        <h1>Cadastrar Novo Cupom</h1>
+        <form id="coupon-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="code">Código do Cupom:</label>
+                    <input type="text" id="code" placeholder="Digite o código" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Nome do Cupom:</label>
+                    <input type="text" id="name" placeholder="Digite o nome" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="discount">Desconto:</label>
+                    <input type="number" id="discount" placeholder="Digite o desconto" required>
+                </div>
+                <div class="form-group">
+                    <label for="discount-type">Tipo de Desconto:</label>
+                    <select id="discount-type">
+                        <option value="%">%</option>
+                        <option value="R$">R$</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="min-value">Valor Mínimo:</label>
+                    <input type="number" id="min-value" placeholder="Digite o valor mínimo" required>
+                </div>
+                <div class="form-group">
+                    <label for="max-discount">Desconto Máximo:</label>
+                    <input type="number" id="max-discount" placeholder="Digite o desconto máximo">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="limit">Limite de Uso:</label>
+                    <input type="number" id="limit" placeholder="Digite o limite de uso">
+                </div>
+                <div class="form-group">
+                    <label for="expiration-date">Data de Expiração:</label>
+                    <input type="date" id="expiration-date">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="status">Status:</label>
+                <select id="status">
+                    <option value="true">Ativo</option>
+                    <option value="false">Inativo</option>
+                </select>
+            </div>
+            <div class="form-actions">
+                <button type="submit">Salvar</button>
+                <button type="button" class="cancel-button" onclick="window.location.href='cupom.html'">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    
+    
+    <script src="../public/js/cupomManager.js"></script>
 
 </body>
 </html>

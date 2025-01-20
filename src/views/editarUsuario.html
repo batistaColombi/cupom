@@ -4,38 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
-    <title>Dito's Gerenciamento de Usuarios</title>
+    <title>Dito's - Gerenciamento de Usuarios</title>
 
-    <link rel="stylesheet" href="../public/css/styleEditarUsuario.css">
+    <!-- Link para o CSS -->
+    <link rel="stylesheet" href="../public/css/styleNotificacaoEdit.css">
     
 </head>
 <body>
 
-    <!-- Processo de renderização-->
-    <script src = "../public/js/renderer.js"></script>
+    <!-- Processo de renderização -->
+    <script src="../public/js/renderer.js"></script>
 
-    <!-- Tela de Gerenciamento de Contas -->
-    <div id="manage-accounts-container" style="display:none;">
-    
-        <h1>Lista de Usuários</h1>
-        <div id="user-list-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nome de Usuário</th>
-                        <th>Nível de Acesso</th>
-                        <th>Senha</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody id="user-list">
-                    <!-- Lista de usuários será renderizada aqui -->
-                </tbody>
-            </table>
-            <button onclick="saveChanges()">Salvar Alterações</button>
-            <button onclick="goBack()">Fechar</button>
+    <div class="main-container">
+        <h1>Cadastrar Nova Notificação</h1>
 
-        </div>
+        <form id="notification-form">
+            <!-- Título -->
+            <div class="form-group">
+                <label for="notification-title">Título:</label>
+                <input type="text" id="notification-title" name="title" placeholder="Digite o título da notificação" required>
+            </div>
+
+            <!-- Mensagem -->
+            <div class="form-group">
+                <label for="notification-message">Mensagem:</label>
+                <textarea id="notification-message" name="message" placeholder="Digite a mensagem da notificação" required></textarea>
+            </div>
+
+            <!-- Data de Envio -->
+            <div class="form-group">
+                <label for="notification-date">Data de Envio:</label>
+                <input type="datetime-local" id="notification-date" name="date" required>
+            </div>
+
+            <!-- Status -->
+            <div class="form-group">
+                <label for="notification-status">Status:</label>
+                <select id="notification-status" name="status" required>
+                    <option value="ativa">Ativa</option>
+                    <option value="inativa">Inativa</option>
+                </select>
+            </div>
+
+            <!-- Botão de Cadastro -->
+            <div class="form-actions">
+                <button type="button" class="submit-button" onclick="saveNotificacao()">Cadastrar Notificação</button>
+            </div>
+            
+            <!-- Botão para voltar à lista de notificações -->
+            <div class="form-actions">
+            <button class="back-button" onclick="window.location.href='notificacao.html'">Voltar à Lista de Notificações</button>
+            </div>
+        </form>
+    </div>
     <script src = "../public/js/login/editarUsuario.js"></script>
 </body>
 </html>

@@ -4,23 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
-    <title>Dito's Notificação</title>
+    <title>Dito's - Gerenciamento de Notificações</title>
+
+    <!-- Link para o CSS -->
+    <link rel="stylesheet" href="../public/css/styleNotificacao.css">
+
 </head>
-
-    <!-- Processo de renderização-->
-    <script src = "../public/js/renderer.js"></script>
-
 <body>
 
-    <h1>Notificações</h1>
-    <div>
-        <input type="text" id="notificationMessage" placeholder="Enter notification message">
-        <button id="addNotification">Add Notification</button>
+    <!-- Processo de renderização -->
+    <script src="../public/js/renderer.js"></script>
+
+    <div class="main-container">
+
+        <!-- Botão para voltar ao Dashboard -->
+        <button class="back-button" onclick="window.location.href='dashboard.html'">Voltar ao Dashboard</button>
+
+        <!-- Botão para cadastrar nova notificação -->
+        <button class="add-notification-button" onclick="window.location.href='cadastrarNotificacao.html'">Cadastrar Notificação</button>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Mensagem</th>
+                    <th>Data de Envio</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="notification-list">
+                <!-- Notificações serão adicionadas dinamicamente -->
+            </tbody>
+        </table>
     </div>
     
-    <ul id="notificationList"></ul>
-
-    <script src = "../public/js/notificacaoManager.js"></script>
-
+    <script src="../public/js/notificacao.js"></script>
 </body>
 </html>
