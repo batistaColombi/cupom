@@ -4,49 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline';">
-   
-    <title>Cadastro - Dito's System</title>
+    <title>Dito's System - Cadastro de Usuário</title>
 
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../public/css/styleUsuarioCadastro.css">
 </head>
-
 <body>
-    <!-- Processo de renderização-->
-    <script src = "../public/js/renderer.js"></script>
-
-        <h1>Cadastro de Usuário</h1>   
-        
+    <div class="container">
+        <h1>Cadastro de Usuário</h1>
         <form id="registerForm">
-            <div>
-                <input id="username" type="text" placeholder="Nome de usuário" required />
-            </div>
-
-            <div>
-                <input id="password" type="password" placeholder="Senha" required />            
-            </div>
-
-            <div>
-                <input id="confirm-password" type="password" placeholder="Confirme a senha" required />
-            </div>
-
-            <div>
-                <select id="access-level" required>
-                    <option value="admin">Administrador</option>
-                    <option value="user">Usuário</option>
-                </select>
-            </div>
-
-            <div>
-                <button type="submit">Cadastrar</button>
-
-                <br>
-                <br>
-
-                <button type="button" id="cancelButton">Cancelar</button>
-            </div>                     
+            <input id="username" type="text" placeholder="Nome de usuário" required>
+            <input id="password" type="password" placeholder="Senha" required>
+            <input id="confirm-password" type="password" placeholder="Confirme a senha" required>
+            <select id="access-level" required>
+                <option value="" disabled selected>Selecione o nível de acesso</option>
+                <option value="admin">Administrador</option>
+                <option value="user">Usuário</option>
+            </select>
+            <button type="submit">Cadastrar</button>
+            <a href="editarUsuario.html" class="back-btn">Voltar</a>
         </form>
+    </div>                    
+    </form>
 
-        <script src="../public/js/login/register.js"></script>
-        
-    </div>
+    <!-- Scripts -->
+    <script src="../public/js/renderer.js"></script>
+    <script src="../public/js/login/register.js"></script>
 </body>
 </html>

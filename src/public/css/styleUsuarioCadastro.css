@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff5e6; /* Fundo claro com tom laranja suave */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ffffff; /* Fundo branco puro */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    color: #e65100; /* Laranja escuro */
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+h1:hover {
+    color: #bf4900; /* Laranja mais escuro */
+}
+
+button {
+    background-color: #e65100; /* Laranja escuro */
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #bf4900; /* Laranja mais escuro */
+    transform: scale(1.05);
+}
+
+input, select {
+    width: calc(100% - 2rem);
+    padding: 0.75rem;
+    margin: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #e65100; /* Laranja escuro */
+    outline: none;
+    box-shadow: 0 0 5px rgba(230, 81, 0, 0.5);
+}
+
+.back-btn {
+    display: block;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #e65100; /* Laranja escuro */
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+    color: #bf4900; /* Laranja mais escuro */
+}

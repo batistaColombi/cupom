@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff5e6; /* Fundo claro com tom laranja suave */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ffffff; /* Fundo branco puro */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    width: 90%;
+    max-width: 800px;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    color: #e65100; /* Laranja escuro */
+    text-align: center;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+h1:hover {
+    color: #bf4900; /* Laranja mais escuro */
+}
+
+button {
+    background-color: #e65100; /* Laranja escuro */
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 1rem;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+}
+
+button:hover {
+    background-color: #bf4900; /* Laranja mais escuro */
+    transform: scale(1.05);
+}
+
+.table-container {
+    margin: 1.5rem 0;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+th {
+    background-color: #e65100; /* Laranja escuro */
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #ffe6cc; /* Laranja muito claro */
+}
+
+.back-btn {
+    display: block;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #e65100; /* Laranja escuro */
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+    color: #bf4900; /* Laranja mais escuro */
+}

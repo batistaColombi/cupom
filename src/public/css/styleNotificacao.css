@@ -1,0 +1,223 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff5e6; /* Fundo claro com tom laranja suave */
+    color: #333; /* Texto escuro */
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves */
+}
+
+/* Container principal */
+.main-container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #ffffff; /* Fundo branco puro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin: auto;
+}
+
+/* Título */
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #e65100; /* Laranja escuro */
+    margin-bottom: 20px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+h1:hover {
+    color: #bf4900; /* Laranja mais escuro no hover */
+}
+
+/* Botões principais */
+.back-button, .add-notification-button {
+    background-color: #e65100; /* Laranja escuro */
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 20px;
+}
+
+.add-notification-button {
+    float: right;
+    background-color: #27ae60; /* Verde */
+}
+
+button:hover {
+    background-color: #bf4900; /* Laranja mais escuro */
+    transform: scale(1.05);
+}
+
+.add-notification-button:hover {
+    background-color: #1e8449; /* Verde mais escuro */
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd; /* Bordas cinza claro */
+    font-size: 14px;
+}
+
+th {
+    background-color: #e65100; /* Laranja escuro */
+    color: #fff; /* Texto branco */
+    font-weight: bold;
+}
+
+td {
+    background-color: #ffffff; /* Fundo branco */
+    color: #333; /* Texto escuro */
+}
+
+/* Botões na tabela */
+td button {
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.edit-button {
+    background-color: #1e8449; /* Verde escuro */
+    color: #fff;
+}
+
+.edit-button:hover {
+    background-color: #145a32; /* Verde mais escuro */
+}
+
+.delete-button {
+    background-color: #e65100; /* Laranja escuro */
+    color: #fff;
+}
+
+.delete-button:hover {
+    background-color: #bf4900; /* Laranja mais escuro */
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333; /* Texto escuro */
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #ffffff; /* Fundo branco */
+    color: #333; /* Texto escuro */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #e65100; /* Destaque laranja */
+    box-shadow: 0 0 5px rgba(230, 81, 0, 0.5);
+}
+
+/* Botões do formulário */
+button[type="submit"] {
+    background-color: #27ae60; /* Verde */
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #1e8449; /* Verde mais escuro */
+}
+
+button.cancel-button {
+    background-color: #e65100; /* Laranja escuro */
+}
+
+button.cancel-button:hover {
+    background-color: #bf4900; /* Laranja mais escuro */
+}
+
+/* Estilo para selects */
+.status-select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #ffffff;
+    background-color: #e65100; /* Laranja escuro */
+}
+
+/* Status ativo - Verde */
+.status-select option[value="ativa"] {
+    background-color: #27ae60; /* Verde */
+    color: #ffffff; /* Texto branco */
+}
+
+/* Status inativo - Vermelho */
+.status-select option[value="inativa"] {
+    background-color: #e74c3c; /* Vermelho */
+    color: #ffffff; /* Texto branco */
+}
+
+/* Hover */
+.status-select:hover {
+    opacity: 0.9;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    th, td {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+
+    .add-notification-button {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}

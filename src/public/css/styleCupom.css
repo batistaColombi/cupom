@@ -1,0 +1,189 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff5e6; /* Fundo claro com tom laranja suave */
+    color: #333; /* Texto escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container principal */
+.main-container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #ffffff; /* Fundo branco puro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center; /* Centralizar o texto */
+}
+
+/* Título */
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #e65100; /* Laranja escuro */
+    margin-bottom: 20px;
+}
+
+/* Contêiner dos botões */
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Botões em lados opostos */
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Botões principais */
+.back-button, .add-coupon-button {
+    background-color: #e65100; /* Laranja escuro */
+    color: #ffffff; /* Texto branco */
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.back-button {
+    background-color: #e65100; /* Laranja escuro */
+}
+
+.add-coupon-button {
+    background-color: #27ae60; /* Verde */
+}
+
+.back-button:hover {
+    background-color: #bf4900; /* Laranja mais escuro */
+    transform: scale(1.05); /* Leve aumento no hover */
+}
+
+.add-coupon-button:hover {
+    background-color: #1e8449; /* Verde mais escuro */
+    transform: scale(1.05);
+}
+
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff; /* Fundo branco */
+    border-radius: 8px;
+    overflow: hidden; /* Bordas arredondadas */
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+th {
+    background-color: #e65100; /* Laranja escuro */
+    color: #ffffff; /* Texto branco */
+    font-weight: bold;
+}
+
+td {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Botões na tabela */
+td button {
+    border-radius: 5px;
+    padding: 10px 16px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.edit-button {
+    background-color: #1e8449; /* Verde escuro */
+    color: #ffffff; /* Texto branco */
+}
+
+.edit-button:hover {
+    background-color: #145a32; /* Verde mais escuro */
+    transform: scale(1.05);
+}
+
+.delete-button {
+    background-color: #e65100; /* Laranja escuro */
+    color: #ffffff; /* Texto branco */
+}
+
+.delete-button:hover {
+    background-color: #bf4900; /* Laranja mais escuro */
+    transform: scale(1.05);
+}
+
+/* Select de status */
+.status-select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #ffffff; /* Texto branco */
+    background-color: #e65100; /* Laranja escuro */
+}
+
+.status-select:hover {
+    background-color: #bf4900; /* Laranja mais escuro */
+}
+
+/* Status Ativo */
+.status-select option[value="true"] {
+    background-color: #1e8449; /* Verde */
+    color: #ffffff; /* Texto branco */
+}
+
+/* Status Inativo */
+.status-select option[value="false"] {
+    background-color: #c0392b; /* Vermelho */
+    color: #ffffff; /* Texto branco */
+}
+
+/* Hover no select */
+.status-select:hover {
+    opacity: 0.9;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-container {
+        padding: 15px;
+        text-align: center; /* Centralizar texto para dispositivos menores */
+    }
+
+    th, td {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+}

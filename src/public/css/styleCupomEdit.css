@@ -1,0 +1,121 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff5e6; /* Fundo claro com tom laranja suave */
+    color: #333; /* Texto escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container principal */
+.main-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff; /* Fundo branco puro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Título */
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #e65100; /* Laranja escuro */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #555;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #e65100; /* Destaque laranja */
+    box-shadow: 0 0 5px rgba(230, 81, 0, 0.5);
+}
+
+/* Botões */
+button {
+    background-color: #e65100; /* Laranja escuro */
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #bf4900; /* Laranja mais escuro */
+    transform: scale(1.05);
+}
+
+.cancel-button {
+    background-color: #c0392b; /* Vermelho */
+}
+
+.cancel-button:hover {
+    background-color: #a93226; /* Vermelho mais escuro */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+}

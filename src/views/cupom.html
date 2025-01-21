@@ -4,25 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
-    <title>Dito's System</title>
-    
+    <title>Dito's - Gerenciamento de Cupons</title>
+
+    <!-- Link para o CSS -->
+    <link rel="stylesheet" href="../public/css/styleCupom.css">
+
 </head>
 <body>
 
     <!-- Processo de renderização-->
-    <script src = "../public/js/renderer.js"></script>
+    <script src="../public/js/renderer.js"></script>
 
-    <h1>Cupom</h1>
+    <div class="main-container">
+        <h1>Lista de Cupons</h1>
 
-    <div>
-        <input type="text" id="couponCode" placeholder="Enter coupon code" />
-        <button id="addCoupon">Add Coupon</button>
+        <div class="button-container">
+            <button class="back-button" onclick="window.location.href='dashboard.html'">Voltar ao Dashboard</button>
+            <button class="add-coupon-button" onclick="window.location.href='cadastrarCupom.html'">Cadastrar Cupom</button>
+        </div>
+        
+        <table class="coupon-table">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nome</th>
+                    <th>Desconto</th>
+                    <th>Valor Mínimo</th>
+                    <th>Desconto Máximo</th>
+                    <th>Limite</th>
+                    <th>Data de Expiração</th>
+                    <th>Hora de Expiração</th>
+                    <th>Quantidade</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="coupon-list">
+                <!-- Cupons serão adicionados dinamicamente -->
+            </tbody>
+        </table>
     </div>
-
-    <ul id="couponList">
-        <!-- Coupons will be dynamically added here -->
-    </ul>
-
-    <script src="../public/js/cupomManager.js"></script>
+    
+    <script src="../public/js/cupom.js"></script>
 </body>
 </html>

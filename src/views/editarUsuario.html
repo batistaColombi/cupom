@@ -3,39 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
-    <title>Dito's Gerenciamento de Usuarios</title>
-
-    <link rel="stylesheet" href="../public/css/styleEditarUsuario.css">
-    
+    <title>Gerenciamento de Usuários</title>
+    <link rel="stylesheet" href="../public/css/styleUsuarioEdit.css">
 </head>
 <body>
-
-    <!-- Processo de renderização-->
-    <script src = "../public/js/renderer.js"></script>
-
-    <!-- Tela de Gerenciamento de Contas -->
-    <div id="manage-accounts-container" style="display:none;">
-    
-        <h1>Lista de Usuários</h1>
-        <div id="user-list-container">
+    <div class="container">
+        <h1>Gerenciamento de Usuários</h1>
+        <button class="add-user-btn" onclick="window.location.href='cadastrarUsuario.html'">Cadastrar Novo Usuário</button>
+        <div class="table-container">
             <table>
                 <thead>
                     <tr>
-                        <th>Nome de Usuário</th>
+                        <th>Usuário</th>
+                        <th>Senha Atual</th>
+                        <th>Nova Senha</th>
                         <th>Nível de Acesso</th>
-                        <th>Senha</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody id="user-list">
-                    <!-- Lista de usuários será renderizada aqui -->
+                    <!-- Dados dinâmicos serão inseridos aqui -->
                 </tbody>
             </table>
-            <button onclick="saveChanges()">Salvar Alterações</button>
-            <button onclick="goBack()">Fechar</button>
-
         </div>
-    <script src = "../public/js/login/editarUsuario.js"></script>
+        <a href="dashboard.html" class="back-btn">Voltar ao Dashboard</a>
+    </div>
+
+    <!-- Inclusão do script -->
+    <script src="../public/js/login/editarUsuario.js"></script>
+    <script src="../public/js/renderer.js"></script>
 </body>
 </html>

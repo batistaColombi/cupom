@@ -1,30 +1,65 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const loginForm = document.getElementById('loginForm');
-    const usernameInput = document.getElementById('username');
-    const passwordInput = document.getElementById('password');
+  const loginForm = document.getElementById('loginForm');
+  const usernameInput = document.getElementById('username');
+  const passwordInput = document.getElementById('password');
 
-    if (loginForm) {
-        loginForm.addEventListener('submit', (event) => {
-            event.preventDefault();
+  if (loginForm) {
+      loginForm.addEventListener('submit', async (event) => {
+          event.preventDefault();
 
-            const username = usernameInput.value.trim();
-            const password = passwordInput.value;
+          // Exibe a tela de carregamento
+          const loadingScreen = document.querySelector('.loading-screen');
+          if (loadingScreen) {
+              loadingScreen.style.display = 'flex';
+          }
 
-            // Recuperar os usuários do localStorage
-            const users = JSON.parse(localStorage.getItem('users')) || [];
+          const username = usernameInput.value.trim();
+          const password = passwordInput.value;
 
-            // Verificar se o usuário existe
-            const user = users.find(u => u.username === username && u.password === password);
+          try {
+              // Recuperar os usuários do localStorage
+              const users = JSON.parse(localStorage.getItem('users')) || [];
 
-            if (user) {
-                alert('Login bem-sucedido!');
-                // Redirecionar para o dashboard ou página principal
-                window.location.href = 'dashboard.html';
-            } else {
-                alert('Usuário ou senha inválidos.');
-            }
-        });
-    }
+              // Verificar se o usuário existe
+              const user = users.find(u => u.username === username && u.password === password);
+
+              if (user) {
+                  // Salva o estado de login no localStorage
+                  localStorage.setItem('currentUser', username);
+
+                  // Simula tempo de carregamento antes de redirecionar
+                  setTimeout(() => {
+                      window.location.href = 'dashboard.html';
+                  }, 2000); // Tempo de 2 segundos para mostrar a tela de carregamento
+              } else {
+                  alert('Usuário ou senha inválidos.');
+                  // Oculta a tela de carregamento
+                  if (loadingScreen) {
+                      loadingScreen.style.display = 'none';
+                  }
+              }
+          } catch (error) {
+              console.error('Erro ao processar o login:', error);
+              alert('Erro ao processar o login.');
+              // Oculta a tela de carregamento em caso de erro
+              if (loadingScreen) {
+                  loadingScreen.style.display = 'none';
+              }
+          }
+      });
+  }
+
+  // Verifica se o usuário já está logado ao carregar a página
+  const currentUser = localStorage.getItem('currentUser');
+  if (currentUser) {
+      window.location.href = 'dashboard.html';
+  }
+
+  // Garante que a tela de carregamento esteja oculta no carregamento da página
+  const loadingScreen = document.querySelector('.loading-screen');
+  if (loadingScreen) {
+      loadingScreen.style.display = 'none';
+  }
 });
 
 // Função para verificar o login
@@ -35,32 +70,9 @@ function validateLogin(username, password) {
 
 // Verifica se o usuário já está logado
 function checkIfLoggedIn() {
-    const currentUser = localStorage.getItem('currentUser');
-    if (currentUser) {
+  const currentUser = localStorage.getItem('currentUser');
+  if (currentUser) {
       // Redireciona para o dashboard se já estiver logado
       window.location.href = 'dashboard.html';
-    }
   }
-
-    // Chama a verificação assim que o script é carregado
-    checkIfLoggedIn();
-
-// Manipulador do evento de envio do formulário
-loginForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  
-  const username = document.getElementById('username').value.trim();
-  const password = document.getElementById('password').value.trim();
-
-  if (validateLogin(username, password)) {
-    // Salva o estado de login no localStorage
-    localStorage.setItem('currentUser', username);
-    window.location.href = 'dashboard.html';
-  } else {
-    alert('Usuário ou senha inválidos.');
-  }
-});
-
-function CadastrarUsuario() {
-    window.open(href ="cadastrarUsuario.html");
 }

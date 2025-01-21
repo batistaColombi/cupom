@@ -1,0 +1,178 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Evitar barras de rolagem indesejadas */
+    background-color: #fff5e6; /* Fundo claro com tom laranja suave */
+}
+
+/* Tela de carregamento */
+.loading-screen {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro com transparência */
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-screen img {
+    width: 100px; /* Ajuste do tamanho da imagem */
+    height: auto;
+    animation: spin 2s linear infinite; /* Animação de carregamento */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Área da imagem */
+.image-container {
+    width: 55%; /* Metade da tela */
+    background: url('../img/ditosImg2.png') no-repeat center center;
+    background-size: cover; /* Ajustar a imagem para cobrir toda a área */
+    background-color: #000000; /* Fundo escuro */
+}
+
+/* Área do formulário */
+.form-container {
+    width: 45%; /* Restante da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; /* Fundo branco */
+}
+
+/* Estilo do formulário */
+form {
+    background-color: #ffffff; /* Fundo branco */
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(255, 140, 0, 0.5); /* Sombra laranja escuro */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Título do formulário */
+form h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #e65100; /* Laranja escuro */
+    text-shadow: 0 2px 5px rgba(230, 81, 0, 0.5);
+}
+
+/* Inputs */
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #e65100; /* Borda laranja escuro */
+    border-radius: 8px;
+    background-color: #ffffff; /* Fundo branco */
+    color: #333;
+    font-size: 16px;
+    box-shadow: inset 0px 2px 5px rgba(255, 140, 0, 0.3);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input::placeholder {
+    color: #e65100; /* Laranja escuro */
+}
+
+form input:focus {
+    border-color: #bf4900; /* Tom mais escuro de laranja */
+    box-shadow: 0 0 5px rgba(230, 81, 0, 0.5);
+}
+
+/* Botão Entrar */
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #e65100; /* Fundo laranja escuro */
+    border: none;
+    border-radius: 8px;
+    color: #ffffff; /* Texto branco */
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #bf4900; /* Tom mais escuro de laranja */
+    transform: scale(1.05);
+}
+
+form button:active {
+    transform: scale(0.95);
+}
+
+/* Link para recuperar senha */
+form a {
+    color: #e65100; /* Laranja escuro */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+form a:hover {
+    color: #bf4900; /* Tom mais escuro de laranja */
+}
+
+/* Texto do rodapé do formulário */
+form p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555; /* Texto suave */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; /* Alterar layout para coluna em telas menores */
+    }
+
+    .image-container {
+        width: 100%;
+        height: 40vh; /* Ocupa 40% da altura */
+    }
+
+    .form-container {
+        width: 100%;
+        height: 60vh; /* Ocupa o restante da altura */
+    }
+
+    form {
+        padding: 20px 15px;
+    }
+
+    form h1 {
+        font-size: 20px;
+    }
+
+    form button {
+        font-size: 16px;
+    }
+}

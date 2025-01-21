@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;">
 
-    <title>Dito's System</title>
+    <title>Dito's - Dashboard</title>
 
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../public/css/styleDashboard.css">
 </head>
 <body>
 
-    <!-- Processo de renderização -->
-    <script src = "../public/js/renderer.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <h1>Dashboard</h1>
+    <!-- Botões de navegação -->
     <div>
-        <button onclick="openCupom()">Cupons</button>
-        <button onclick="openNotificacao()">Notificações</button>
+        <button onclick="location.href='cupom.html'">Cupons</button>
+        <button onclick="location.href='notificacao.html'">Notificações</button>
         <button onclick="location.href='editarUsuario.html'">Gerenciar Usuários</button>
         <button onclick="logout()">Sair</button> 
     </div> 
-    
+
+    <br>
+
+    <!-- Título -->
+    <h1>Dashboard</h1>
+
+    <!-- Gráficos -->
     <div class="dashboard-container">
         <div class="chart-container">
             <h3>App Downloads</h3>
@@ -38,6 +41,9 @@
         </div>
     </div>
 
-    <script src="../public/js/dashboard.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Carrega Chart.js -->
+    <script src="../public/js/renderer.js"></script> <!-- Renderização -->
+    <script src="../public/js/dashboard.js"></script> <!-- Dashboard -->
 </body>
 </html>

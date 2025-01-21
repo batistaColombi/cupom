@@ -12,14 +12,14 @@ const { openIndex,
 
 const template = [
     {
-        label: 'Inicial',
-        click: () => openIndex(),
+        //label: 'Inicial',
+        //click: () => openIndex(),
 
         submenu: [
-            {
-                label: 'Dashboard',
-                click: () => openDashboard()
-            },
+            //{
+            //    label: 'Dashboard',
+            //    click: () => openDashboard()
+            //},
             {   label: 'Ferramentas do desenvolvedor', 
                 role: 'toggleDevTools',},
 
@@ -31,15 +31,14 @@ const template = [
                 accelerator: 'Alt+F4' },
         ],
     },
-    { 
-        label: 'Cupom',
-        click: () => openCupom()
-
-    },
-    {
-        label: 'Notificação',    
-        click: () => openNotificacao()
-    },
+    //{ 
+    //    label: 'Cupom',
+    //    click: () => openCupom()
+    //},
+    //{
+    //    label: 'Notificação',    
+    //    click: () => openNotificacao()
+    //},
 ];
 
 const setApplicationMenu = () => {

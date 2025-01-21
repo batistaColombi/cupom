@@ -1,42 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline';">
 
-    <title>Login - Dito's System</title>
+    <title>Dito's System - Login</title>
+
+    <!-- Link para o CSS -->
+    <link rel="stylesheet" href="../public/css/styleLogin.css">
 
 </head>
+
 <body>
-    <!-- Processo de renderização -->
-    <script src="../public/js/renderer.js"></script>
 
-    <h1>Dito's Lanches</h1>
-
-    <form id="loginForm">
-        <div>
-            <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
-        </div>
-
-        </div>
-            <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
-            
-        </div>
-
-        <div>
+    <!-- Área principal -->
+    <div class="image-container"></div>
+    <div class="form-container">
+        <form id="loginForm">
+            <h1>Bem-vindo</h1>
+            <input type="text" id="username" placeholder="Usuário" required>
+            <input type="password" id="password" placeholder="Senha" required>
             <button type="submit">Entrar</button>
-        </div>
+            <p>Esqueceu sua senha? <a href="#" onclick="alert('Função de recuperação em desenvolvimento.')">Recuperar</a></p>
+        </form>
+    </div>
 
-        <div>
-            <a href="#" onclick="esqueceuSenha()">Esqueceu sua senha?</a>
-        </div>
+    <!-- Tela de carregamento -->
+    <div class="loading-screen">
+        <img src="../public/img/ditosImg.png" alt="Carregando...">
+    </div>
 
-        <div>
-            <p>Não tem uma conta? <a href="cadastrarUsuario.html">Cadastre-se</a></p>
-        </div>    
-    </form>
-
-    <script src="../public/js/login/login.js"></script>
+    <script src="../public/js/renderer.js"></script> <!-- Script externo -->
+    <script src="../public/js/login/login.js"></script> <!-- Script externo -->
 </body>
+
 </html>

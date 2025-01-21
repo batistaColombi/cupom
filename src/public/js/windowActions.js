@@ -1,151 +1,47 @@
 const { BrowserWindow } = require('electron');
 const { createWindowGeneric } = require('./windowManager');
 
-const openIndex = () => {
-    const parent = BrowserWindow.getFocusedWindow();
+// Função genérica para abrir janelas
+const openWindow = ({ filePath, modal = true, parent = null }) => {
+    if (!parent) {
+        parent = BrowserWindow.getFocusedWindow();
+    }
+
     if (parent) {
         createWindowGeneric({
-            width: 800,
-            height: 600,
-            filePath: './src/views/index.html',
+            width : 1440,
+            height : 900,
+            minWidth: 800, // Largura mínima
+            minHeight:  600, // Altura mínima
+            resizable: true, // Permite redimensionar
+            filePath,
             parent,
-            modal: true,
-            autoHideMenuBar: true
+            modal,
+            autoHideMenuBar: false // True para retirar a menuBar
         });
     }
 };
 
-//Princial(Dashboard)______________________________________
-const openDashboard = () => {
-    const parent = BrowserWindow.getFocusedWindow();
-    if (parent) {
-        createWindowGeneric({
-            width: 800,
-            height: 600,
-            filePath: src = './src/views/dashboard.html',
-            parent,
-            modal: true,
-            autoHideMenuBar: false
-        });
-    }
-};
+// Funções específicas
+const openIndex = () => openWindow({ filePath: './src/views/index.html' });
 
+const openDashboard = () => openWindow({ filePath: './src/views/dashboard.html' });
 
-//Janealas dos cupons______________________________________
-const openCupom = () => {
-    const parent = BrowserWindow.getFocusedWindow();
-    if (parent) {
-        createWindowGeneric({
-            width: 800,
-            height: 600,
-            filePath: './src/views/cupom.html',
-            parent,
-            modal: true,
-            autoHideMenuBar: false
-        });
-    }
-};
+const openCupom = () => openWindow({ filePath: './src/views/cupom.html' });
 
-const openCadastrarCupom = () => {
-    const parent = BrowserWindow.getFocusedWindow();
-    if (parent) {
-        createWindowGeneric({
-            width: 800,
-            height: 600,
-            filePath: './src/views/cadastrarCupom.html',
-            parent,
-            modal: true,
-            autoHideMenuBar: true
-        });
-    }
-};
+const openCadastrarCupom = () => openWindow({ filePath: './src/views/cadastrarCupom.html' });
 
-const openEditarCupom = () => {
-    const parent = BrowserWindow.getFocusedWindow();
-    if (parent) {
-        createWindowGeneric({
-            width: 800,
-            height: 600,
-            filePath: './src/views/editarCupom.html',
-            parent,
-            modal: true,
-            autoHideMenuBar: true
-        });
-    }
-};
+const openEditarCupom = () => openWindow({ filePath: './src/views/editarCupom.html' });
 
-//Janeala das Notificações______________________________________
-const openNotificacao = () => {
-    const parent = BrowserWindow.getFocusedWindow();
-    if (parent) {
-        createWindowGeneric({
-            width: 800,
-            height: 600,
-            filePath: './src/views/notificacao.html',
-            parent,
-            modal: true,
-            autoHideMenuBar: false
-        });
-    }
-};
+const openNotificacao = () => openWindow({ filePath: './src/views/notificacao.html' });
 
-const openCadastrarNotificacao = () => {
-    const parent = BrowserWindow.getFocusedWindow();
-    if (parent) {
-        createWindowGeneric({
-            width: 800,
-            height: 600,
-            filePath: './src/views/cadastrarNotificacao.html',
-            parent,
-            modal: true,
-            autoHideMenuBar: true
-        });
-    }
-};
+const openCadastrarNotificacao = () => openWindow({ filePath: './src/views/cadastrarNotificacao.html' });
 
-const openEditarNotificacao = () => {
-    const parent = BrowserWindow.getFocusedWindow();
-    if (parent) {
-        createWindowGeneric({
-            width: 800,
-            height: 600,
-            filePath: './src/views/editarNotificacao.html',
-            parent,
-            modal: true,
-            autoHideMenuBar: true
-        });
-    }
-};
+const openEditarNotificacao = () => openWindow({ filePath: './src/views/editarNotificacao.html' });
 
-//Janealas Cadastro e Edição de Usuário______________________________________
-const openCadastrarUsuario = () => {
-    const parent = BrowserWindow.getFocusedWindow();
-    if (parent) {
-        createWindowGeneric({
-            width: 800,
-            height: 600,
-            filePath: './src/views/cadastrarUsuario.html',
-            parent,
-            modal: true,
-            autoHideMenuBar: false
-        });
-    }
-};
+const openCadastrarUsuario = () => openWindow({ filePath: './src/views/cadastrarUsuario.html' });
 
-const openEditarUsuario = () => {
-    const parent = BrowserWindow.getFocusedWindow();
-    if (parent) {
-        createWindowGeneric({
-            width: 800,
-            height: 600,
-            filePath: './src/views/editarUsuario.html',
-            parent,
-            modal: true,
-            autoHideMenuBar: true
-        });
-    }
-};
-
+const openEditarUsuario = () => openWindow({ filePath: './src/views/editarUsuario.html' });
 
 module.exports = {
     openIndex,

@@ -4,16 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
-    <title>Dito's System</title>
+    <title>Dito's - Editar Cupom</title>
 
+    <!-- Link para o CSS -->
+    <link rel="stylesheet" href="../public/css/styleCupomEdit.css">
 </head>
 <body>
 
-    <!-- Processo de renderização-->
-    <script src = "../public/js/renderer.js"></script>
+    <!-- Processo de renderização -->
+    <script src="../public/js/renderer.js"></script>
 
-    <h1>Editar Cupom</h1>
+    <div class="main-container">
+        <h1>Editar Cupom</h1>
+        <!-- Área de Mensagem de Feedback -->
+        <div id="message-box" class="hidden"></div>
+        
+        <form id="coupon-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="code">Código do Cupom:</label>
+                    <input type="text" id="code" placeholder="Digite o código" required aria-label="Código do Cupom">
+                </div>
+                <div class="form-group">
+                    <label for="name">Nome do Cupom:</label>
+                    <input type="text" id="name" placeholder="Digite o nome" required aria-label="Nome do Cupom">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="discount">Desconto:</label>
+                    <input type="number" id="discount" placeholder="Digite o desconto" required min="0" step="0.01" aria-label="Desconto do Cupom">
+                </div>
+                <div class="form-group">
+                    <label for="discount-type">Tipo de Desconto:</label>
+                    <select id="discount-type" aria-label="Tipo de Desconto">
+                        <option value="%">%</option>
+                        <option value="R$">R$</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="min-value">Valor Mínimo:</label>
+                    <input type="number" id="min-value" placeholder="Digite o valor mínimo" required min="0" step="0.01" aria-label="Valor Mínimo">
+                </div>
+                <div class="form-group">
+                    <label for="max-discount">Desconto Máximo:</label>
+                    <input type="number" id="max-discount" placeholder="Digite o desconto máximo" min="0" step="0.01" aria-label="Desconto Máximo">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="limit">Limite de Uso:</label>
+                    <input type="number" id="limit" placeholder="Digite o limite de uso" required min="1" step="1" aria-label="Limite de Uso">
+                </div>
+                <div class="form-group">
+                    <label for="expiration-date">Data de Expiração:</label>
+                    <input type="date" id="expiration-date" required aria-label="Data de Expiração">
+                </div>
+                <div class="form-group">
+                    <label for="expiration-time">Hora de Expiração:</label>
+                    <input type="time" id="expiration-time" required aria-label="Hora de Expiração">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantidade de Cupons:</label>
+                <input type="number" id="quantity" placeholder="Digite a quantidade" required min="1" step="1" aria-label="Quantidade de Cupons">
+            </div>
+            <div class="form-group">
+                <label for="active">Status:</label>
+                <select id="active" aria-label="Status do Cupom">
+                    <option value="true">Ativo</option>
+                    <option value="false">Inativo</option>
+                </select>
+            </div>
+            <div class="form-actions">
+                <button type="button" onclick="saveCoupon()">Salvar</button>
+                <button type="button" class="cancel-button" onclick="window.location.href='cupom.html'">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    
 
-
+    <script src="../public/js/cupomEdit.js"></script>
 </body>
 </html>
