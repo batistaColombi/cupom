@@ -47,3 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = 'notificacao.html';
     });
 });
+
+function voltar() {
+    window.location.href = 'notificacao.html';
+}
